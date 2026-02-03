@@ -12,7 +12,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src="/Img.jpg" alt="Victor Ogbuefi" />
+          <img src="/Img3.jpeg" alt="Victor Ogbuefi" />
         </motion.div>
 
         {/* About Content */}

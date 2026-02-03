@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
-        <h1 className="nav-logo">Victor's<span>Portfolio</span></h1>
+        <h1 className="nav-logo">Victor <span>Ogbuefi</span></h1>
 
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           {["home", "about", "skills", "projects", "contact",].map((item) => (

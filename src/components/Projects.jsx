@@ -4,25 +4,25 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Food Delivery App",
-    desc: "A responsive web app for food ordering, built with React, Node.js, and MongoDB.",
+    title: "PhotoGraphy Website",
+    desc: "A modern photography website showcasing curated galleries, lazy-loaded images, and smooth animations — built with React and deployed on Vercel.",
     img: "/Hero.png",
-    live: "https://your-foodapp-demo.vercel.app",
-    github: "https://github.com/yourusername",
+    live: "https://photo-graphy-puce.vercel.app/",
+    github: "https://github.com/RealLoner49/PhotoGraphy",
   },
   {
-    title: "Portfolio Website",
-    desc: "My personal portfolio with smooth animations and a clean UI showcasing my work.",
+    title: "My-AI App",
+    desc: "My-AI App — lightweight React-Native with local state-based prompt handling, result previews, and polished UX.",
     img: "/Hero.png",
-    live: "https://your-portfolio.vercel.app",
-    github: "https://github.com/yourusername",
+    live: "#",
+    github: "#",
   },
   {
     title: "E-Commerce Store",
-    desc: "An online store with cart and checkout, powered by React and Firebase.",
+    desc: "Full-featured e-commerce demo with product catalog, shopping cart, and Firebase-authenticated checkout.",
     img: "/Hero.png",
-    live: "https://your-ecommerce-demo.vercel.app",
-    github: "https://github.com/yourusername",
+    live: "#",
+    github: "#",
   },
 ];
 
@@ -48,31 +48,50 @@ const Projects = () => {
       </motion.p>
 
       <div className="projects-grid">
-        {projects.map((proj, index) => (
-          <motion.div
-            key={index}
-            className="project-card"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 250 }}
-          >
-            <div className="project-img">
-              <img src={proj.img} alt={proj.title} />
-              <div className="project-overlay">
-                <a href={proj.live} target="_blank" rel="noreferrer">
-                  <FaExternalLinkAlt />
-                </a>
-                <a href={proj.github} target="_blank" rel="noreferrer">
-                  <FaGithub />
-                </a>
-              </div>
-            </div>
+        {projects.map((proj, index) => {
+          const isAvailable = proj.live && proj.live !== "#" && proj.live.trim() !== "";
+          const hasGithub = proj.github && proj.github !== "#" && proj.github.trim() !== "";
+          const Card = isAvailable ? motion.a : motion.div;
+          const cardProps = isAvailable
+            ? { href: proj.live, target: "_blank", rel: "noreferrer" }
+            : { role: "button", "aria-disabled": "true" };
 
-            <div className="project-content">
-              <h3>{proj.title}</h3>
-              <p>{proj.desc}</p>
-            </div>
-          </motion.div>
-        ))}
+          return (
+            <Card
+              key={index}
+              {...cardProps}
+              className={`project-card ${!isAvailable ? "disabled" : ""}`}
+              whileHover={isAvailable ? { scale: 1.05 } : {}}
+              transition={{ type: "spring", stiffness: 250 }}
+            >
+              <div className="project-img">
+                <img src={proj.img} alt={proj.title} />
+                <div className="project-overlay">
+                  {isAvailable && (
+                    <a href={proj.live} target="_blank" rel="noreferrer">
+                      <FaExternalLinkAlt />
+                    </a>
+                  )}
+
+                  {hasGithub && (
+                    <a href={proj.github} target="_blank" rel="noreferrer">
+                      <FaGithub />
+                    </a>
+                  )}
+
+                  {!isAvailable && !hasGithub && (
+                    <span className="coming-soon">Coming soon</span>
+                  )}
+                </div>
+              </div>
+
+              <div className="project-content">
+                <h3>{proj.title}</h3>
+                <p>{proj.desc}</p>
+              </div>
+            </Card>
+          );
+        })}
       </div>
     </section>
   );

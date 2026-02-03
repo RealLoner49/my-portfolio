@@ -9,21 +9,21 @@ const Testimonials = () => {
           <p>
             “Victor is a top-notch developer. He transformed our website into something truly world-class.”
           </p>
-          <h4>- Sarah Johnson</h4>
-          <span>Product Manager, NexaTech</span>
+          <h4>- Mrs Ifeoma Ogbuefi</h4>
+          <span>Product Manager, Ome Electrical Company</span>
         </div>
         <div className="testimonial">
           <p>
             “Fast, creative, and reliable. Victor’s attention to design detail and user experience is amazing.”
           </p>
-          <h4>- Daniel Okafor</h4>
-          <span>Founder, DEX Studio</span>
+          <h4>- Mr Sunday Okafor</h4>
+          <span>Founder, CEO of PrintLine Limited</span>
         </div>
         <div className="testimonial">
           <p>
             “He handled both frontend and backend of our app perfectly. Excellent communication and skills!”
           </p>
-          <h4>- Lisa Chen</h4>
+          <h4>- Miss Faith Nwosu</h4>
           <span>CEO, BrightWeb</span>
         </div>
       </div>
