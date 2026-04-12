@@ -11,14 +11,14 @@ const projects = [
     github: "https://github.com/RealLoner49/PhotoGraphy",
   },
   {
-    title: "E-Commerce Store",
+    title: "Nova Gadget E-commerce",
     desc: "Full-featured e-commerce demo with product catalog, shopping cart, and Firebase-authenticated checkout.",
     img: "/nova-gadget.jpeg",
     live: "htps://nova-gadget.vercel.app/",
     github: "https://github.com/RealLoner49/nova-gadget",
   },
   {
-    title: "My-AI App",
+    title: "AURA AI Assistant",
     desc: "COMING SOON",
     //  desc: "My-AI App — lightweight React-Native with local state-based prompt handling, result previews, and polished UX.",
     img: "/coming-soon.jpg",
