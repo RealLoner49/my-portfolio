@@ -6,7 +6,7 @@ const projects = [
   {
     title: "PhotoGraphy Website",
     desc: "A modern photography website showcasing curated galleries, lazy-loaded images, and smooth animations — built with React and deployed on Vercel.",
-    img: "/photography.png",
+    img: "/photography.jpeg",
     live: "https://photo-graphy-puce.vercel.app/",
     github: "https://github.com/RealLoner49/PhotoGraphy",
   },
@@ -21,7 +21,7 @@ const projects = [
     title: "AURA AI Assistant",
     desc: "COMING SOON",
     //  desc: "My-AI App — lightweight React-Native with local state-based prompt handling, result previews, and polished UX.",
-    img: "/coming-soon.jpg",
+    img: "/coming-soon.jpeg",
     live: "#",
     github: "#",
   },
