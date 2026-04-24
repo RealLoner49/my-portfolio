@@ -14,7 +14,7 @@ const projects = [
     title: "Nova Gadget E-commerce",
     desc: "Full-featured e-commerce demo with product catalog, shopping cart, and Firebase-authenticated checkout.",
     img: "/nova-gadget.jpeg",
-    live: "htps://nova-gadget.vercel.app/",
+    live: "https://nova-gadget.vercel.app/",
     github: "https://github.com/RealLoner49/nova-gadget",
   },
   {
