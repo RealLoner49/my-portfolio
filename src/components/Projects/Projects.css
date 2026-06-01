@@ -16,9 +16,12 @@
 
 .project-img {
   aspect-ratio: 2.05 / 1;
-  background: rgba(5, 7, 17, 0.7);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.16), transparent 36%),
+    rgba(5, 7, 17, 0.88);
   display: block;
   overflow: hidden;
+  padding: 8px;
   position: relative;
 }
 
@@ -27,23 +30,25 @@ a.project-img {
 }
 
 .project-img::after {
-  background: linear-gradient(180deg, transparent 35%, rgba(5, 7, 17, 0.78));
+  background: linear-gradient(180deg, rgba(5, 7, 17, 0.08), rgba(5, 7, 17, 0.46));
   content: "";
-  inset: 0;
+  inset: 8px;
   position: absolute;
+  pointer-events: none;
 }
 
 .project-img img {
+  border-radius: 8px;
   filter: saturate(1.06) contrast(1.04);
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.35s ease, filter 0.35s ease;
   width: 100%;
 }
 
 .project-card:hover .project-img img {
   filter: saturate(1.18) contrast(1.08);
-  transform: scale(1.035);
+  transform: scale(1.018);
 }
 
 .project-category {
