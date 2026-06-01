@@ -1,0 +1,19 @@
+#backToTop {
+  background: linear-gradient(135deg, var(--cyan), var(--lime));
+  border: 0;
+  border-radius: 999px;
+  bottom: 24px;
+  box-shadow: 0 14px 36px rgba(34, 211, 238, 0.25);
+  color: #03111f;
+  cursor: pointer;
+  display: none;
+  font-size: 1.1rem;
+  font-weight: 950;
+  height: 48px;
+  position: fixed;
+  right: 24px;
+  width: 48px;
+  z-index: 999;
+}
+
+

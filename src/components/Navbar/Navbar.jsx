@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
   // Track active section on scroll
   useEffect(() => {
     const handleActiveSection = () => {
-      const sections = document.querySelectorAll("section");
+      const sections = document.querySelectorAll("header[id], section[id]");
       sections.forEach((sec) => {
         const top = window.scrollY;
         const offset = sec.offsetTop - 200;
@@ -44,7 +45,7 @@ const Navbar = () => {
         <h1 className="nav-logo">Victor <span>Ogbuefi</span></h1>
 
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-          {["home", "about", "skills", "projects", "contact",].map((item) => (
+          {["home", "about", "services", "projects", "process", "contact"].map((item) => (
             <li key={item}>
               <button
                 className={activeSection === item ? "active" : ""}
@@ -68,3 +69,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
