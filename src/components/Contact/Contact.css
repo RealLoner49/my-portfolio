@@ -53,8 +53,8 @@ a.info-card:hover {
 
 .contact-form input,
 .contact-form textarea {
-  background: rgba(5, 7, 17, 0.68);
-  border: 1px solid rgba(153, 246, 228, 0.16);
+  background: rgba(9, 19, 34, 0.9);
+  border: 1px solid rgba(153, 246, 228, 0.18);
   border-radius: var(--radius);
   color: var(--text);
   outline: none;
@@ -76,7 +76,7 @@ a.info-card:hover {
 }
 
 .form-status {
-  color: var(--lime);
+  color: var(--cyan);
   font-weight: 800;
 }
 

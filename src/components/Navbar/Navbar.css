@@ -33,10 +33,7 @@
 }
 
 .nav-logo span {
-  background: linear-gradient(90deg, #e8f7ff, var(--cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--cyan);
 }
 
 .nav-links {

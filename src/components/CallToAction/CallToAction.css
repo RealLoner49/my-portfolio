@@ -1,7 +1,5 @@
 .cta-section {
-  background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.16), rgba(163, 230, 53, 0.1), rgba(251, 113, 133, 0.09)),
-    rgba(5, 7, 17, 0.6);
+  background: rgba(8, 17, 31, 0.64);
   border-block: 1px solid rgba(153, 246, 228, 0.16);
   padding: 86px 8%;
   position: relative;
@@ -10,9 +8,8 @@
 .cta-card {
   align-items: center;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)) padding-box,
-    linear-gradient(135deg, rgba(34, 211, 238, 0.5), rgba(163, 230, 53, 0.28), rgba(251, 113, 133, 0.28)) border-box;
-  border: 1px solid transparent;
+    rgba(16, 28, 46, 0.8);
+  border: 1px solid rgba(153, 246, 228, 0.14);
   border-radius: 18px;
   box-shadow: 0 32px 100px rgba(0, 0, 0, 0.28);
   display: grid;
@@ -26,7 +23,7 @@
 }
 
 .cta-card::before {
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.2), transparent 62%);
+  background: rgba(34, 211, 238, 0.06);
   content: "";
   height: 380px;
   left: -150px;
@@ -36,7 +33,7 @@
 }
 
 .cta-card::after {
-  background: radial-gradient(circle, rgba(163, 230, 53, 0.18), transparent 64%);
+  background: rgba(34, 211, 238, 0.04);
   bottom: -170px;
   content: "";
   height: 420px;
@@ -78,7 +75,7 @@
 }
 
 .cta-next h3 {
-  color: #eaffb9;
+  color: #d8f7ff;
   font-size: 1.2rem;
   margin-bottom: 16px;
 }
@@ -97,7 +94,7 @@
 }
 
 .cta-next li::before {
-  background: linear-gradient(135deg, var(--cyan), var(--lime));
+  background: var(--cyan);
   border-radius: 50%;
   content: "";
   flex: 0 0 auto;

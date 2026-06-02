@@ -1,13 +1,10 @@
 .process-section {
-  background:
-    radial-gradient(circle at 18% 20%, rgba(34, 211, 238, 0.16), transparent 24rem),
-    radial-gradient(circle at 84% 76%, rgba(163, 230, 53, 0.12), transparent 26rem),
-    linear-gradient(180deg, rgba(5, 7, 17, 0.62), rgba(8, 17, 31, 0.92));
+  background: rgba(8, 17, 31, 0.62);
   overflow: hidden;
 }
 
 .process-section::after {
-  background: linear-gradient(90deg, transparent, rgba(163, 230, 53, 0.38), transparent);
+  background: rgba(153, 246, 228, 0.12);
   content: "";
   height: 1px;
   left: 12%;
@@ -33,7 +30,7 @@
 }
 
 .process-summary span {
-  color: var(--lime);
+  color: var(--cyan);
   display: block;
   font-size: 0.76rem;
   font-weight: 900;
@@ -57,11 +54,9 @@
 }
 
 .process-card {
-  background:
-    linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.025)) padding-box,
-    linear-gradient(145deg, rgba(34, 211, 238, 0.45), rgba(163, 230, 53, 0.22), rgba(251, 113, 133, 0.25)) border-box;
-  border: 1px solid transparent;
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+  background: rgba(16, 28, 46, 0.78);
+  border: 1px solid rgba(153, 246, 228, 0.13);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
   min-height: 292px;
   overflow: hidden;
   padding: 28px;
@@ -73,8 +68,8 @@
 }
 
 .process-card:hover {
-  border-color: rgba(163, 230, 53, 0.42);
-  box-shadow: 0 36px 110px rgba(34, 211, 238, 0.14);
+  border-color: rgba(34, 211, 238, 0.32);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
   transform: translateY(-10px);
 }
 
@@ -86,7 +81,7 @@
 }
 
 .process-number {
-  color: var(--lime);
+  color: var(--cyan);
   display: inline-flex;
   font-size: 0.9rem;
   font-weight: 950;
@@ -132,7 +127,7 @@
 }
 
 .process-details li::before {
-  background: linear-gradient(135deg, var(--cyan), var(--lime));
+  background: var(--cyan);
   border-radius: 50%;
   content: "";
   flex: 0 0 auto;
@@ -152,7 +147,7 @@
 }
 
 .process-card::after {
-  background: linear-gradient(90deg, var(--cyan), var(--lime));
+  background: rgba(34, 211, 238, 0.7);
   border-radius: 999px;
   content: "";
   height: 4px;
@@ -181,7 +176,7 @@
 }
 
 .process-output strong {
-  color: #eaffb9;
+  color: #d8f7ff;
   font-size: 0.9rem;
 }
 

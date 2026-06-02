@@ -32,7 +32,7 @@
 
 .testimonial-avatar {
   align-items: center;
-  background: linear-gradient(135deg, var(--cyan), var(--lime));
+  background: var(--cyan);
   border-radius: 50%;
   color: #03111f;
   display: inline-flex;
@@ -54,7 +54,7 @@
 }
 
 .testimonial h3 {
-  color: #eaffb9;
+  color: #d8f7ff;
   margin-bottom: 3px;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .testimonial-rating {
-  color: var(--lime);
+  color: var(--cyan);
   display: flex;
   gap: 4px;
   margin-bottom: 18px;

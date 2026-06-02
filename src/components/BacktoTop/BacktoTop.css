@@ -1,5 +1,5 @@
 #backToTop {
-  background: linear-gradient(135deg, var(--cyan), var(--lime));
+  background: var(--cyan);
   border: 0;
   border-radius: 999px;
   bottom: 24px;

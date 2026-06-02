@@ -1,8 +1,10 @@
 .services-section {
-  background:
-    radial-gradient(circle at 10% 10%, rgba(34, 211, 238, 0.13), transparent 24rem),
-    radial-gradient(circle at 90% 20%, rgba(163, 230, 53, 0.1), transparent 24rem),
-    linear-gradient(180deg, rgba(5, 7, 17, 0.08), rgba(8, 17, 31, 0.7));
+  background: transparent;
+  overflow: hidden;
+}
+
+.services-section::before {
+  opacity: 0.18;
 }
 
 .services-grid {
@@ -12,10 +14,8 @@
 }
 
 .service-card {
-  background:
-    linear-gradient(155deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.025)) padding-box,
-    linear-gradient(145deg, rgba(34, 211, 238, 0.42), rgba(163, 230, 53, 0.2), rgba(251, 113, 133, 0.22)) border-box;
-  border: 1px solid transparent;
+  background: rgba(10, 18, 32, 0.72);
+  border: 1px solid rgba(153, 246, 228, 0.13);
   border-radius: 18px;
   min-height: 360px;
   overflow: hidden;
@@ -24,7 +24,7 @@
 }
 
 .service-card::before {
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.18), transparent 62%);
+  background: rgba(34, 211, 238, 0.06);
   content: "";
   height: 210px;
   position: absolute;
@@ -34,7 +34,7 @@
 }
 
 .service-card::after {
-  background: linear-gradient(90deg, var(--cyan), var(--lime));
+  background: rgba(34, 211, 238, 0.7);
   bottom: 0;
   content: "";
   height: 4px;
@@ -44,16 +44,16 @@
 }
 
 .service-card:nth-child(2n)::before {
-  background: radial-gradient(circle, rgba(163, 230, 53, 0.18), transparent 62%);
+  background: rgba(34, 211, 238, 0.05);
 }
 
 .service-card:nth-child(3n)::before {
-  background: radial-gradient(circle, rgba(251, 113, 133, 0.16), transparent 62%);
+  background: rgba(34, 211, 238, 0.05);
 }
 
 .service-card:hover {
-  border-color: rgba(163, 230, 53, 0.42);
-  box-shadow: 0 32px 95px rgba(34, 211, 238, 0.13);
+  border-color: rgba(34, 211, 238, 0.32);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
   transform: translateY(-10px);
 }
 
@@ -68,8 +68,7 @@
 
 .service-icon {
   align-items: center;
-  background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.22), rgba(163, 230, 53, 0.1));
+  background: rgba(34, 211, 238, 0.1);
   border: 1px solid rgba(153, 246, 228, 0.2);
   border-radius: 16px;
   color: var(--cyan);
@@ -92,7 +91,7 @@
   background: rgba(5, 7, 17, 0.58);
   border: 1px solid rgba(153, 246, 228, 0.16);
   border-radius: 999px;
-  color: #eaffb9;
+  color: #d8f7ff;
   display: inline-flex;
   font-size: 0.76rem;
   font-weight: 900;
@@ -136,7 +135,7 @@
 }
 
 .service-list li::before {
-  background: linear-gradient(135deg, var(--cyan), var(--lime));
+  background: var(--cyan);
   border-radius: 50%;
   content: "";
   flex: 0 0 auto;
