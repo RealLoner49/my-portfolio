@@ -38,7 +38,7 @@ const Hero = () => {
           </p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="btn primary">Hire Me</a>
+            <a href="#contact" className="btn primary">Let's Talk</a>
             <a href="#projects" className="btn secondary">View Work</a>
             <a href="/CV.pdf" className="btn ghost" download>Download CV</a>
           </div>
