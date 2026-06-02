@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="nav-container">
         <h1 className="nav-logo">Victor <span>Ogbuefi</span></h1>
 

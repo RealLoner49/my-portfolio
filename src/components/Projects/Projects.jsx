@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import './Projects.css';
 
 const projects = [
@@ -112,12 +112,13 @@ const Projects = () => {
                   <div className="project-links">
                     {isLive && (
                       <a
+                        className="live-link"
                         href={project.live}
                         target="_blank"
                         rel="noreferrer"
                         aria-label={`${project.title} live project`}
                       >
-                        <FaExternalLinkAlt />
+                        Open Live
                       </a>
                     )}
                     {project.github && (
