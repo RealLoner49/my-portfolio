@@ -71,7 +71,7 @@ const About = () => {
           transition={{ duration: 0.85, ease: "easeOut" }}
         >
           <div className="image-ring"></div>
-          <img src="/developer-avatar.png" alt="Developer avatar of Victor Ogbuefi" />
+          <img src="/VICTOR.png" alt="Developer avatar of Victor Ogbuefi" />
 
           <div className="about-badge badge-one">Full-stack</div>
           <div className="about-badge badge-two">Premium UI</div>
