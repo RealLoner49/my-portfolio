@@ -5,14 +5,13 @@ import './Projects.css';
 
 const projects = [
   {
-    title: "Dripova Wears",
-    category: "Fashion e-commerce",
-    desc: "A sleek fashion storefront with bold visuals, product-first sections, and a modern shopping feel.",
-    img: "/Dripova-wears.jpeg",
-    imagePosition: "left top",
-    live: "https://dripova-wears.vercel.app/",
-    github: "https://github.com/RealLoner49/Dripova-Wears",
-    tags: ["React", "Responsive UI", "Vercel"],
+    title: "Ama Store",
+    category: "Ama Store Collection",
+    desc: "A fully responsive online store developed with React, featuring an elegant product catalog, smooth navigation, and a user-friendly shopping experience."    img: "/Ama-Store.jpeg",
+    imagePosition: "center center",
+    live: "https://ama-store-psi.vercel.app/",
+    github: "https://github.com/RealLoner49/AMA-STORE",
+    tags: ["Html", "Javascript", "Responsive Design"],
   },
   {
     title: "Photography Website",
@@ -23,6 +22,16 @@ const projects = [
     live: "https://photo-graphy-puce.vercel.app/",
     github: "https://github.com/RealLoner49/PhotoGraphy",
     tags: ["React", "Portfolio", "Responsive Design"],
+  },
+  {
+    title: "Dripova Wears",
+    category: "Fashion e-commerce",
+    desc: "A sleek fashion storefront with bold visuals, product-first sections, and a modern shopping feel.",
+    img: "/Dripova-wears.jpeg",
+    imagePosition: "left top",
+    live: "https://dripova-wears.vercel.app/",
+    github: "https://github.com/RealLoner49/Dripova-Wears",
+    tags: ["React", "Responsive UI", "Vercel"],
   },
   {
     title: "Ome Electrical Company",
