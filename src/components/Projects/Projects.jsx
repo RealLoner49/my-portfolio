@@ -7,7 +7,8 @@ const projects = [
   {
     title: "Ama Store",
     category: "Ama Store Collection",
-    desc: "A fully responsive online store developed with React, featuring an elegant product catalog, smooth navigation, and a user-friendly shopping experience."    img: "/Ama-Store.jpeg",
+    desc: "A fully responsive online store developed with React, featuring an elegant product catalog, smooth navigation, and a user-friendly shopping experience.",    
+    img: "/Ama-Store.jpeg",
     imagePosition: "center center",
     live: "https://ama-store-psi.vercel.app/",
     github: "https://github.com/RealLoner49/AMA-STORE",
