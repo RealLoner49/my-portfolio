@@ -1,8 +1,37 @@
 import React from "react";
-import { FaMobileAlt, FaPalette, FaRocket, FaSearch, FaShoppingBag, FaTools } from "react-icons/fa";
+import {
+  FaBuilding,
+  FaCode,
+  FaPlug,
+  FaRocket,
+  FaSearch,
+  FaShoppingBag,
+  FaTools,
+} from "react-icons/fa";
 import './Services.css';
 
 const services = [
+  {
+    icon: <FaCode />,
+    title: "Website Development",
+    text: "Custom websites built with clean code, responsive layouts, and strong performance.",
+    bestFor: "Professional web presence",
+    includes: ["Custom sections", "Responsive build", "Launch support"],
+  },
+  {
+    icon: <FaShoppingBag />,
+    title: "E-commerce",
+    text: "Product-focused storefronts with smooth browsing, clear product pages, and conversion-ready layouts.",
+    bestFor: "Online stores",
+    includes: ["Product catalog", "Cart flow", "Checkout-ready UI"],
+  },
+  {
+    icon: <FaBuilding />,
+    title: "Business Websites",
+    text: "Credible company websites for service providers, suppliers, agencies, and local brands.",
+    bestFor: "Trust and inquiries",
+    includes: ["Service pages", "About and proof", "Contact flow"],
+  },
   {
     icon: <FaRocket />,
     title: "Landing Pages",
@@ -11,32 +40,18 @@ const services = [
     includes: ["Hero section", "Lead capture", "Fast mobile layout"],
   },
   {
-    icon: <FaShoppingBag />,
-    title: "E-commerce Stores",
-    text: "Modern product catalogs, carts, checkout flows, and admin-friendly layouts.",
-    bestFor: "Online stores",
-    includes: ["Product pages", "Cart experience", "Checkout flow"],
-  },
-  {
-    icon: <FaPalette />,
-    title: "UI/UX Design",
-    text: "Clean interfaces, thoughtful user flows, and premium visual direction.",
-    bestFor: "Better user trust",
-    includes: ["Wireframes", "Visual system", "Responsive screens"],
-  },
-  {
-    icon: <FaMobileAlt />,
-    title: "Mobile Experiences",
-    text: "Responsive websites and React Native app screens that feel natural on phones.",
-    bestFor: "Mobile-first products",
-    includes: ["Phone layouts", "Touch-friendly UI", "App screens"],
+    icon: <FaPlug />,
+    title: "API Integration",
+    text: "Connect forms, payment tools, data services, authentication, dashboards, and third-party platforms.",
+    bestFor: "Connected products",
+    includes: ["REST APIs", "Auth and data", "Form handling"],
   },
   {
     icon: <FaTools />,
-    title: "Web App Builds",
-    text: "Frontend and backend features with APIs, auth, dashboards, and databases.",
-    bestFor: "Functional platforms",
-    includes: ["Authentication", "Dashboards", "Database setup"],
+    title: "Website Maintenance",
+    text: "Ongoing fixes, content updates, speed improvements, backups, and technical support.",
+    bestFor: "Long-term stability",
+    includes: ["Bug fixes", "Content updates", "Performance checks"],
   },
   {
     icon: <FaSearch />,

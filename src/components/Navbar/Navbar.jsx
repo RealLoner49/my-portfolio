@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 import './Navbar.css';
 
-const Navbar = () => {
+const navItems = ["home", "about", "skills", "services", "projects", "experience", "contact"];
+
+const Navbar = ({ theme, onToggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,16 +38,23 @@ const Navbar = () => {
 
   const handleNavClick = (id) => {
     setIsMenuOpen(false);
-    document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" });
+    document.querySelector(`#${id}`)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    document.body.classList.toggle("nav-locked", isMenuOpen);
+    return () => document.body.classList.remove("nav-locked");
+  }, [isMenuOpen]);
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="nav-container">
-        <h1 className="nav-logo">Victor <span>Ogbuefi</span></h1>
+        <button className="nav-logo" onClick={() => handleNavClick("home")} aria-label="Go to home">
+          Victor <span>Ogbuefi</span>
+        </button>
 
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-          {["home", "about", "services", "projects", "process", "contact"].map((item) => (
+          {navItems.map((item) => (
             <li key={item}>
               <button
                 className={activeSection === item ? "active" : ""}
@@ -57,11 +66,22 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div
+        <div className="nav-actions">
+          <button
+            className="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            {theme === "dark" ? <FaSun /> : <FaMoon />}
+          </button>
+
+          <button
           className="menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
       </div>
     </nav>

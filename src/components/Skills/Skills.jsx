@@ -1,16 +1,49 @@
 import React from "react";
 import { motion } from "framer-motion";
-import './Skills.css';
+import {
+  FaCode,
+  FaDatabase,
+  FaFigma,
+  FaGitAlt,
+  FaMobileAlt,
+  FaReact,
+  FaSearch,
+  FaServer,
+} from "react-icons/fa";
+import { SiFirebase, SiJavascript, SiSupabase } from "react-icons/si";
+import "./Skills.css";
 
-const skills = [
-  { name: "HTML", icon: "fab fa-html5", level: "95%", area: "Structure" },
-  { name: "CSS", icon: "fab fa-css3-alt", level: "92%", area: "Visual UI" },
-  { name: "JavaScript", icon: "fab fa-js", level: "88%", area: "Interaction" },
-  { name: "React", icon: "fab fa-react", level: "86%", area: "Frontend" },
-  { name: "Node.js", icon: "fab fa-node-js", level: "80%", area: "Backend" },
-  { name: "Firebase", icon: "fas fa-fire", level: "78%", area: "Auth & data" },
-  { name: "SQL", icon: "fas fa-database", level: "75%", area: "Database" },
-  { name: "React Native", icon: "fab fa-react", level: "74%", area: "Mobile" },
+const skillGroups = [
+  {
+    title: "Frontend",
+    icon: <FaReact />,
+    skills: [
+      { name: "React", icon: <FaReact />, level: "88%" },
+      { name: "JavaScript", icon: <SiJavascript />, level: "88%" },
+      { name: "HTML & CSS", icon: <FaCode />, level: "94%" },
+      { name: "Responsive UI", icon: <FaMobileAlt />, level: "92%" },
+    ],
+  },
+  {
+    title: "Backend & Data",
+    icon: <FaServer />,
+    skills: [
+      { name: "Node.js", icon: <FaServer />, level: "80%" },
+      { name: "Firebase", icon: <SiFirebase />, level: "78%" },
+      { name: "Supabase", icon: <SiSupabase />, level: "78%" },
+      { name: "SQL & Databases", icon: <FaDatabase />, level: "75%" },
+    ],
+  },
+  {
+    title: "Product & Delivery",
+    icon: <FaFigma />,
+    skills: [
+      { name: "UI/UX Planning", icon: <FaFigma />, level: "86%" },
+      { name: "SEO Structure", icon: <FaSearch />, level: "82%" },
+      { name: "Git Workflow", icon: <FaGitAlt />, level: "84%" },
+      { name: "React Native", icon: <FaMobileAlt />, level: "74%" },
+    ],
+  },
 ];
 
 const Skills = () => {
@@ -18,10 +51,10 @@ const Skills = () => {
     <section id="skills" className="section skills-section">
       <div className="section-heading">
         <span className="eyebrow">Skills</span>
-        <h2>Technology I use to bring ideas alive</h2>
+        <h2>Skills grouped by how they help your project</h2>
         <p>
-          A practical stack for building modern websites, apps, dashboards, and
-          mobile-friendly experiences.
+          A practical stack for planning, building, integrating, optimizing, and
+          maintaining modern websites and applications.
         </p>
       </div>
 
@@ -34,21 +67,21 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
         >
           <span className="skills-panel-kicker">Core stack</span>
-          <h3>Tools I use to design, build, and ship.</h3>
+          <h3>From interface to launch-ready functionality.</h3>
           <p>
-            My stack covers the full path from interface design to real app
-            functionality: responsive layouts, interactive flows, data, auth,
-            and mobile-ready experiences.
+            I use these tools to create responsive layouts, product flows,
+            authentication, database features, API integrations, SEO structure,
+            and clean deployment handovers.
           </p>
 
           <div className="skills-panel-stats">
             <div>
-              <strong>8</strong>
-              <span>Core tools</span>
+              <strong>12+</strong>
+              <span>Practical tools</span>
             </div>
             <div>
-              <strong>Full</strong>
-              <span>Web workflow</span>
+              <strong>3</strong>
+              <span>Skill categories</span>
             </div>
           </div>
 
@@ -62,29 +95,37 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <div className="skills-list">
-          {skills.map((skill, index) => (
+        <div className="skills-groups">
+          {skillGroups.map((group, groupIndex) => (
             <motion.article
-              key={skill.name}
-              className="skill-row"
+              key={group.title}
+              className="skill-group"
               initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.04 }}
+              transition={{ duration: 0.4, delay: groupIndex * 0.08 }}
             >
-              <div className="skill-row-icon">
-                <i className={skill.icon}></i>
+              <div className="skill-group-title">
+                <span>{group.icon}</span>
+                <h3>{group.title}</h3>
               </div>
-              <div className="skill-row-main">
-                <div className="skill-row-title">
-                  <h3>{skill.name}</h3>
-                  <span>{skill.area}</span>
-                </div>
-                <div className="skill-bar">
-                  <span style={{ width: skill.level }}></span>
-                </div>
+
+              <div className="skills-list">
+                {group.skills.map((skill) => (
+                  <div className="skill-row" key={skill.name}>
+                    <div className="skill-row-icon">{skill.icon}</div>
+                    <div className="skill-row-main">
+                      <div className="skill-row-title">
+                        <h4>{skill.name}</h4>
+                        <span>{skill.level}</span>
+                      </div>
+                      <div className="skill-bar">
+                        <span style={{ width: skill.level }}></span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <strong>{skill.level}</strong>
             </motion.article>
           ))}
         </div>
@@ -94,4 +135,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

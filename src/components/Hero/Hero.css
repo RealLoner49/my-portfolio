@@ -10,7 +10,7 @@
 }
 
 .hero::before {
-  background: rgba(34, 211, 238, 0.06);
+  background: linear-gradient(135deg, rgba(94, 234, 212, 0.08), rgba(250, 204, 21, 0.035));
   clip-path: polygon(0 8%, 100% 0, 92% 70%, 10% 100%);
   content: "";
   filter: blur(2px);
@@ -53,7 +53,7 @@
 }
 
 .hero-glow-one {
-  background: rgba(34, 211, 238, 0.08);
+  background: rgba(94, 234, 212, 0.1);
   height: 360px;
   left: -110px;
   top: 120px;
@@ -61,7 +61,7 @@
 }
 
 .hero-glow-two {
-  background: rgba(37, 99, 235, 0.06);
+  background: rgba(250, 204, 21, 0.055);
   bottom: 70px;
   height: 300px;
   right: 0;
@@ -71,7 +71,7 @@
 .hero-content {
   align-items: center;
   display: grid;
-  gap: 68px;
+  gap: 58px;
   grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.78fr);
   min-width: 0;
   position: relative;
@@ -86,9 +86,9 @@
 
 .hero-text h1 {
   color: #f7fbff;
-  font-size: clamp(2.8rem, 7vw, 6.8rem);
+  font-size: clamp(2.8rem, 6.4vw, 6.35rem);
   letter-spacing: 0;
-  line-height: 0.9;
+  line-height: 0.94;
   margin: 18px 0 24px;
   max-width: 930px;
   text-shadow: none;
@@ -98,6 +98,24 @@
   color: #c7d6ea;
   font-size: clamp(1rem, 2vw, 1.18rem);
   max-width: 690px;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-highlights span {
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.2);
+  border-radius: 999px;
+  color: #fff7cc;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+  padding: 9px 12px;
 }
 
 .hero-buttons {
@@ -118,7 +136,7 @@
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
     rgba(7, 14, 25, 0.72);
-  border: 1px solid rgba(153, 246, 228, 0.16);
+  border: 1px solid rgba(125, 211, 252, 0.15);
   border-radius: var(--radius);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   overflow: hidden;
@@ -127,7 +145,7 @@
 }
 
 .stat-card::before {
-  background: var(--cyan);
+  background: linear-gradient(180deg, var(--cyan), var(--amber));
   content: "";
   inset: 0 auto 0 0;
   position: absolute;
@@ -155,7 +173,7 @@
 .social-icons a {
   align-items: center;
   background: rgba(7, 14, 25, 0.72);
-  border: 1px solid rgba(153, 246, 228, 0.16);
+  border: 1px solid rgba(125, 211, 252, 0.15);
   border-radius: 999px;
   color: #d7e7f7;
   display: inline-flex;
@@ -189,7 +207,7 @@
   width: 470px;
   height: 470px;
   border-radius: 50%;
-  background: rgba(34, 211, 238, 0.08);
+  background: rgba(94, 234, 212, 0.08);
   filter: blur(18px);
   z-index: -2;
 }
@@ -197,10 +215,10 @@
 .dev-card {
   width: min(430px, 88vw);
   padding: 24px;
-  border-radius: 30px;
+  border-radius: 24px;
   background:
     rgba(13, 25, 43, 0.95);
-  border: 1px solid rgba(153, 246, 228, 0.16);
+  border: 1px solid rgba(125, 211, 252, 0.16);
   box-shadow:
     0 28px 70px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -231,22 +249,60 @@
   z-index: 2;
 }
 
+.hero-profile {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(125, 211, 252, 0.14);
+  border-radius: 18px;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-profile img {
+  aspect-ratio: 1;
+  border: 2px solid rgba(94, 234, 212, 0.42);
+  border-radius: 50%;
+  height: 64px;
+  object-fit: cover;
+  object-position: center top;
+  width: 64px;
+}
+
+.hero-profile small {
+  color: var(--muted);
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-profile strong {
+  color: #f7fbff;
+  display: block;
+  line-height: 1.25;
+}
+
 .card-top span {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #7dd3fc;
+  background: var(--coral);
   box-shadow: none;
   animation: dotBounce 1.8s ease-in-out infinite;
 }
 
 .card-top span:nth-child(2) {
-  background: #38bdf8;
+  background: var(--amber);
   animation-delay: 0.18s;
 }
 
 .card-top span:nth-child(3) {
-  background: #2563eb;
+  background: var(--cyan);
   animation-delay: 0.36s;
 }
 
@@ -263,7 +319,7 @@
   padding: 14px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(153, 246, 228, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.12);
   transform-origin: left;
   animation: codeFloat 4s ease-in-out infinite;
 }
@@ -283,7 +339,7 @@
 }
 
 .code-lines span {
-  color: #93e5ff;
+  color: var(--cyan);
   font-weight: 900;
   text-shadow: none;
 }
@@ -293,7 +349,7 @@
   padding: 18px;
   border-radius: 20px;
   background: rgba(5, 7, 17, 0.74);
-  border: 1px solid rgba(153, 246, 228, 0.18);
+  border: 1px solid rgba(125, 211, 252, 0.18);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -305,11 +361,64 @@
   color: #fff;
 }
 
+:root[data-theme="light"] .hero {
+  background: #ffffff;
+}
+
+:root[data-theme="light"] .hero::before {
+  background: linear-gradient(135deg, rgba(0, 159, 143, 0.12), rgba(250, 204, 21, 0.08));
+  opacity: 0.72;
+}
+
+:root[data-theme="light"] .hero::after {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.96) 100%);
+}
+
+:root[data-theme="light"] .hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  opacity: 0.75;
+}
+
+:root[data-theme="light"] .hero-text h1 {
+  color: #08111f;
+}
+
+:root[data-theme="light"] .subtitle {
+  color: #334155;
+}
+
+:root[data-theme="light"] .hero-highlights span {
+  background: rgba(250, 204, 21, 0.18);
+  border-color: rgba(183, 121, 31, 0.26);
+  color: #5f3b04;
+}
+
+:root[data-theme="light"] .stat-card {
+  background: rgba(255, 255, 255, 0.84);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+:root[data-theme="light"] .stat-card strong {
+  color: #08111f;
+}
+
+:root[data-theme="light"] .social-icons a {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+:root[data-theme="light"] .social-icons a:hover {
+  color: var(--cyan);
+}
+
 .live-dot {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #22c55e;
+  background: var(--lime);
   box-shadow:
     0 0 0 8px rgba(34, 197, 94, 0.14),
     0 0 26px rgba(34, 197, 94, 0.95);
@@ -321,7 +430,7 @@
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  border: 1px dashed rgba(153, 246, 228, 0.26);
+  border: 1px dashed rgba(125, 211, 252, 0.26);
   animation: spin 20s linear infinite;
 }
 
@@ -354,7 +463,7 @@
   padding: 11px 16px;
   border-radius: 999px;
   background: rgba(5, 7, 17, 0.82);
-  border: 1px solid rgba(153, 246, 228, 0.28);
+  border: 1px solid rgba(125, 211, 252, 0.28);
   backdrop-filter: blur(14px);
   color: #d8f7ff;
   font-weight: 900;
@@ -515,12 +624,12 @@
 @media (max-width: 560px) {
   .hero {
     background: var(--bg);
-    min-height: 100svh;
-    padding: 88px 18px 48px;
+    min-height: auto;
+    padding: 88px 18px 34px;
   }
 
   .hero::before {
-    background: rgba(34, 211, 238, 0.06);
+    background: linear-gradient(135deg, rgba(94, 234, 212, 0.12), rgba(250, 204, 21, 0.04));
     clip-path: polygon(0 5%, 100% 0, 94% 72%, 18% 100%);
     filter: blur(0);
     height: 78%;
@@ -569,7 +678,7 @@
 
   .hero-content {
     align-items: start;
-    gap: 30px;
+    gap: 22px;
   }
 
   .hero-text {
@@ -635,6 +744,16 @@
     margin-top: 16px;
   }
 
+  .hero-highlights {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .hero-highlights span {
+    font-size: 0.7rem;
+    padding: 8px 10px;
+  }
+
   .social-icons a {
     height: 38px;
     width: 38px;
@@ -646,20 +765,20 @@
 
   .hero-visual.no-image {
     margin-inline: auto;
-    min-height: 270px;
+    min-height: 230px;
     order: 2;
-    width: min(100%, 340px);
+    width: min(100%, 310px);
   }
 
   .hero-visual.no-image::before {
-    height: 280px;
-    width: 280px;
+    height: 230px;
+    width: 230px;
   }
 
   .orbit-ring {
-    height: 250px;
+    height: 220px;
     opacity: 0.72;
-    width: 250px;
+    width: 220px;
   }
 
   .skill-chip {
@@ -689,12 +808,32 @@
 
   .dev-card {
     border-radius: 22px;
-    padding: 16px;
-    width: min(300px, 82vw);
+    padding: 14px;
+    width: min(280px, 80vw);
   }
 
   .card-top {
     margin-bottom: 16px;
+  }
+
+  .hero-profile {
+    border-radius: 14px;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 9px;
+  }
+
+  .hero-profile img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .hero-profile small {
+    font-size: 0.62rem;
+  }
+
+  .hero-profile strong {
+    font-size: 0.82rem;
   }
 
   .card-top span {

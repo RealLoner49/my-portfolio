@@ -1,5 +1,6 @@
 import React from "react";
-import './Testimonials.css';
+import { FaStar } from "react-icons/fa";
+import "./Testimonials.css";
 
 const testimonials = [
   {
@@ -9,25 +10,25 @@ const testimonials = [
     name: "Ifeoma Ogbuefi",
     role: "Product Manager, Ome Electrical Company",
     project: "Company website redesign",
-    result: "A modern, responsive website that effectively showcases our products and attracts new clients.",
+    result: "A modern, responsive website that showcases our products and attracts new clients.",
   },
   {
     initials: "NO",
     quote:
-      " I must say that Victor is highly talented, skilled, and delivers top-notch work. I highly recommend his services to anyone looking for quality web development solutions.",
+      "Victor is highly talented, skilled, and delivers top-notch work. I recommend his services to anyone looking for quality web development.",
     name: "Ngozi Okafor",
     role: "Business Owner, Dripova Wears",
     project: "E-commerce website",
-    result: "Increased sales and customer engagement by creating a seamless online shopping experience.",
+    result: "A smoother online shopping experience with stronger product presentation.",
   },
   {
     initials: "WS",
     quote:
-      "Victor created an amazing photography website for me that perfectly showcases my work and attracts potential clients. He is talented and professional.",
+      "Victor created an amazing photography website that perfectly showcases my work and attracts potential clients.",
     name: "William Sandra",
     role: "Photographer",
     project: "Photography portfolio website",
-    result: "A visually stunning portfolio that effectively showcases my work and attracts potential clients.",
+    result: "A visually strong portfolio that makes the creative work easy to explore.",
   },
 ];
 
@@ -36,10 +37,10 @@ const Testimonials = () => {
     <section id="testimonials" className="section testimonials-section">
       <div className="section-heading">
         <span className="eyebrow">Testimonials</span>
-        <h2>Proof from people I have built for</h2>
+        <h2>Reviews from people I have built for</h2>
         <p>
-          A good project is not only about how it looks. It should feel smooth,
-          communicate clearly, and make the client confident to share it.
+          Clients trust me to communicate clearly, ship carefully, and turn
+          their ideas into polished digital experiences.
         </p>
       </div>
 
@@ -55,11 +56,11 @@ const Testimonials = () => {
             </div>
 
             <div className="testimonial-rating" aria-label="Five star rating">
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
             </div>
 
             <p>"{item.quote}"</p>
@@ -82,4 +83,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-

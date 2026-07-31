@@ -12,7 +12,7 @@
 
 .testimonial::before {
   color: rgba(255, 255, 255, 0.06);
-  content: "“";
+  content: "\"";
   font-size: 8rem;
   font-weight: 950;
   line-height: 1;

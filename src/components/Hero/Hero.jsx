@@ -1,15 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaDownload,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa";
 import "./Hero.css";
 
 const stats = [
-  { value: "20+", label: "Projects shipped" },
-  { value: "3+", label: "Years building" },
-  { value: "100%", label: "Responsive focus" },
+  { value: "40+", label: "Projects launched" },
+  { value: "3+", label: "Years in product UI" },
+  { value: "99%", label: "Client satisfaction" },
 ];
 
-const skills = ["Html", "React", "React Native", "Javascript"];
+const skills = ["React", "Node.js", "Firebase", "Supabase"];
+
+const highlights = ["E-commerce", "Business sites", "Mobile-first UI"];
 
 const Hero = () => {
   return (
@@ -28,19 +38,31 @@ const Hero = () => {
           <span className="eyebrow">Available for freelance projects</span>
 
           <h1>
-            Building clean, fast & premium web experiences.
+            I build polished websites that help brands look trusted and sell faster.
           </h1>
 
           <p className="subtitle">
-            Hi, I am Victor Ogbuefi, a creative full-stack developer focused on
-            responsive websites, smooth user experiences, and modern digital
-            products for ambitious brands.
+            Hi, I am Victor Ogbuefi, a full-stack developer creating responsive
+            storefronts, business websites, and digital products with sharp UI,
+            smooth interactions, and practical engineering.
           </p>
 
+          <div className="hero-highlights" aria-label="Portfolio focus areas">
+            {highlights.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+
           <div className="hero-buttons">
-            <a href="#contact" className="btn primary">Let's Talk</a>
-            <a href="#projects" className="btn secondary">View Work</a>
-            <a href="/CV.pdf" className="btn ghost" download>Download CV</a>
+            <a href="#contact" className="btn primary">
+              Start a Project <FaArrowRight />
+            </a>
+            <a href="#projects" className="btn secondary">
+              View Work
+            </a>
+            <a href="/CV.pdf" className="btn ghost" download>
+              <FaDownload /> CV
+            </a>
           </div>
 
           <div className="hero-stats">
@@ -55,6 +77,9 @@ const Hero = () => {
           <div className="social-icons">
             <a href="https://github.com/RealLoner49" target="_blank" rel="noreferrer" aria-label="GitHub">
               <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <FaLinkedin />
             </a>
             <a href="https://www.tiktok.com/@mars_3232" target="_blank" rel="noreferrer" aria-label="TikTok">
               <FaTiktok />
@@ -83,16 +108,24 @@ const Hero = () => {
               <span></span>
             </div>
 
+            <div className="hero-profile">
+              <img src="/VICTOR.png" alt="Professional headshot of Victor Ogbuefi" />
+              <div>
+                <small>Victor Ogbuefi</small>
+                <strong>Full-stack Developer</strong>
+              </div>
+            </div>
+
             <div className="code-lines">
               <p><span>const</span> developer = "Victor";</p>
-              <p><span>stack</span> = ["React", "Node", "UI"];</p>
-              <p><span>goal</span> = "Build premium products";</p>
+              <p><span>stack</span> = ["React", "Node", "Data"];</p>
+              <p><span>focus</span> = "Launch-ready experiences";</p>
             </div>
 
             <div className="status-box">
               <div>
-                <small>Status</small>
-                <strong>Open to work</strong>
+                <small>Current focus</small>
+                <strong>Websites that convert</strong>
               </div>
               <span className="live-dot"></span>
             </div>

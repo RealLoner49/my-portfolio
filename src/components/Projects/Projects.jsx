@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import './Projects.css';
 
 const projects = [
@@ -12,7 +12,12 @@ const projects = [
     imagePosition: "center center",
     live: "https://ama-store-psi.vercel.app/",
     github: "https://github.com/RealLoner49/AMA-STORE",
-    tags: ["Html", "Javascript", "Responsive Design"],
+    tags: ["HTML", "JavaScript", "Responsive"],
+    result: "Product browsing built for quick shopping decisions.",
+    problem: "The store needed a clean way to present products and help visitors move quickly from interest to action.",
+    solution: "I created a responsive storefront with clear categories, focused product visuals, and simple navigation.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    featured: true,
   },
   {
     title: "Photography Website",
@@ -22,7 +27,11 @@ const projects = [
     imagePosition: "center center",
     live: "https://photo-graphy-puce.vercel.app/",
     github: "https://github.com/RealLoner49/PhotoGraphy",
-    tags: ["React", "Portfolio", "Responsive Design"],
+    tags: ["React", "Portfolio", "Gallery UI"],
+    result: "Visual-first layout for showcasing creative work.",
+    problem: "Creative work needed to feel premium without hiding the images behind heavy interface elements.",
+    solution: "I built an immersive gallery layout with responsive sections and a polished portfolio flow.",
+    techStack: ["React", "CSS", "Vercel"],
   },
   {
     title: "Dripova Wears",
@@ -32,7 +41,11 @@ const projects = [
     imagePosition: "left top",
     live: "https://dripova-wears.vercel.app/",
     github: "https://github.com/RealLoner49/Dripova-Wears",
-    tags: ["React", "Responsive UI", "Vercel"],
+    tags: ["React", "Fashion UI", "Vercel"],
+    result: "Bold storefront experience for a fashion audience.",
+    problem: "The fashion brand needed a stylish online presence that matched the energy of its products.",
+    solution: "I designed a product-first shopping experience with bold visuals, mobile-friendly layout, and clear calls-to-action.",
+    techStack: ["React", "CSS", "Vercel"],
   },
   {
     title: "Ome Electrical Company",
@@ -42,7 +55,11 @@ const projects = [
     imagePosition: "center center",
     live: "https://ome-electrical-company.vercel.app/",
     github: "https://github.com/RealLoner49/Ome-Electrical-Company",
-    tags: ["React", "Supabase", "Responsive Design"]
+    tags: ["React", "Supabase", "Business Site"],
+    result: "Company presence designed for credibility and discovery.",
+    problem: "The company needed to communicate its products and services with more trust and clarity.",
+    solution: "I built a professional company website with structured service sections, product visibility, and contact pathways.",
+    techStack: ["React", "Supabase", "CSS"],
   },
   {
     title: "Nova Gadget",
@@ -53,6 +70,10 @@ const projects = [
     live: "https://nova-gadget.vercel.app/",
     github: "https://github.com/RealLoner49/nova-gadget",
     tags: ["React", "Firebase", "UI/UX"],
+    result: "Marketplace flow for browsing gadget products.",
+    problem: "Gadget buyers needed a faster way to browse categories and understand product options.",
+    solution: "I created a marketplace-style interface with clean product sections and Firebase-backed app direction.",
+    techStack: ["React", "Firebase", "CSS"],
   },
   {
     title: "AURA AI Assistant",
@@ -63,6 +84,10 @@ const projects = [
     live: "",
     github: "",
     tags: ["AI", "UX", "Coming Soon"],
+    result: "Concept in progress for a polished assistant workflow.",
+    problem: "AI tools can feel complex when prompts, previews, and actions are not organized clearly.",
+    solution: "I am shaping a mobile-first assistant interface with simple prompts, useful previews, and clear action states.",
+    techStack: ["React", "AI UX", "Product Design"],
   },
 ];
 
@@ -84,7 +109,7 @@ const Projects = () => {
           return (
             <motion.article
               key={project.title}
-              className={`project-card ${!isLive ? "disabled" : ""}`}
+              className={`project-card ${project.featured ? "featured" : ""} ${!isLive ? "disabled" : ""}`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -104,6 +129,7 @@ const Projects = () => {
                     style={{ objectPosition: project.imagePosition }}
                   />
                   <div className="project-category">{project.category}</div>
+                  {project.featured && <span className="featured-badge">Featured</span>}
                 </a>
               ) : (
                 <div className="project-img">
@@ -113,6 +139,7 @@ const Projects = () => {
                     style={{ objectPosition: project.imagePosition }}
                   />
                   <div className="project-category">{project.category}</div>
+                  {project.featured && <span className="featured-badge">Featured</span>}
                 </div>
               )}
 
@@ -128,7 +155,7 @@ const Projects = () => {
                         rel="noreferrer"
                         aria-label={`${project.title} live project`}
                       >
-                        Open Live
+                        <FaExternalLinkAlt /> Live
                       </a>
                     )}
                     {project.github && (
@@ -145,6 +172,28 @@ const Projects = () => {
                   </div>
                 </div>
                 <p>{project.desc}</p>
+                <div className="project-details">
+                  <div>
+                    <span>Problem</span>
+                    <p>{project.problem}</p>
+                  </div>
+                  <div>
+                    <span>Solution</span>
+                    <p>{project.solution}</p>
+                  </div>
+                </div>
+                <div className="project-result">
+                  <span>Outcome</span>
+                  <strong>{project.result}</strong>
+                </div>
+                <div className="project-stack">
+                  <span>Tech stack</span>
+                  <div>
+                    {project.techStack.map((tool) => (
+                      <strong key={tool}>{tool}</strong>
+                    ))}
+                  </div>
+                </div>
                 <div className="tag-list">
                   {project.tags.map((tag) => (
                     <span key={tag}>{tag}</span>

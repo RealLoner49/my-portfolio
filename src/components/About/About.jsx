@@ -85,15 +85,24 @@ const About = () => {
           transition={{ duration: 0.85, ease: "easeOut" }}
         >
           <p>
-            I am Victor Ogbuefi, a full-stack web developer who enjoys combining
-            strong visuals with solid engineering. My goal is simple: make every
-            project feel premium, load quickly, and help the owner get results.
+            I am Victor Ogbuefi, a full-stack developer based in Lagos, Nigeria,
+            working with founders, small businesses, creators, and growing brands
+            that need a reliable digital presence. I care about the full journey:
+            the first impression, the message, the user flow, the build quality,
+            and what happens after launch.
           </p>
 
           <p>
-            I work across frontend, backend, and mobile experiences, with a
-            strong focus on React, modern JavaScript, clean component systems,
-            and responsive design.
+            My work sits between design and engineering. I plan clean page
+            structures, write modern React and JavaScript, connect APIs and
+            databases when needed, and make sure every project feels fast,
+            responsive, and easy to trust on mobile and desktop.
+          </p>
+
+          <p>
+            I am especially strong at building e-commerce experiences, business
+            websites, landing pages, portfolios, dashboards, and brand-focused
+            websites that communicate clearly to international audiences.
           </p>
 
           <div className="strength-grid">
