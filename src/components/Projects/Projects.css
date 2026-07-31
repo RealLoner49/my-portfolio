@@ -269,6 +269,12 @@ a.project-img {
   padding: 6px 9px;
 }
 
+:root[data-theme="light"] .tag-list span {
+  background: rgba(0, 159, 143, 0.1);
+  border-color: rgba(0, 159, 143, 0.24);
+  color: #006b61;
+}
+
 @media (max-width: 560px) {
   .project-title-row {
     align-items: flex-start;
