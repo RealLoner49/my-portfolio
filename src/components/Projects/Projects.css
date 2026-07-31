@@ -162,6 +162,19 @@ a.project-img {
   color: #ffffff;
 }
 
+:root[data-theme="light"] .project-result {
+  background: rgba(250, 204, 21, 0.13);
+  border-color: rgba(183, 121, 31, 0.28);
+}
+
+:root[data-theme="light"] .project-result span {
+  color: #9a5f00;
+}
+
+:root[data-theme="light"] .project-result strong {
+  color: #5f3b04;
+}
+
 .project-result {
   background: rgba(250, 204, 21, 0.075);
   border: 1px solid rgba(250, 204, 21, 0.14);
