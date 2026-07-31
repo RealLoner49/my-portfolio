@@ -150,6 +150,18 @@ a.project-img {
   color: #ffffff;
 }
 
+:root[data-theme="light"] .project-links .live-link {
+  background: rgba(0, 159, 143, 0.12);
+  border-color: rgba(0, 159, 143, 0.36);
+  color: #006b61;
+}
+
+:root[data-theme="light"] .project-links .live-link:hover {
+  background: #009f8f;
+  border-color: #009f8f;
+  color: #ffffff;
+}
+
 .project-result {
   background: rgba(250, 204, 21, 0.075);
   border: 1px solid rgba(250, 204, 21, 0.14);
