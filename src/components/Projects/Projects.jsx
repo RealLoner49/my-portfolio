@@ -10,7 +10,7 @@ const projects = [
     desc: "A fully responsive online store developed with React, featuring an elegant product catalog, smooth navigation, and a user-friendly shopping experience.",    
     img: "/Ama-store.jpeg",
     imagePosition: "center center",
-    live: "https://ama-store-psi.vercel.app/",
+    live: "https://www.shopamastore.com/",
     github: "https://github.com/RealLoner49/AMA-STORE",
     tags: ["HTML", "JavaScript", "Responsive"],
     result: "Product browsing built for quick shopping decisions.",
@@ -31,7 +31,7 @@ const projects = [
     result: "Visual-first layout for showcasing creative work.",
     problem: "Creative work needed to feel premium without hiding the images behind heavy interface elements.",
     solution: "I built an immersive gallery layout with responsive sections and a polished portfolio flow.",
-    techStack: ["React", "CSS", "Vercel"],
+    techStack: ["HTML", "CSS", "Vercel"],
   },
   {
     title: "Dripova Wears",
